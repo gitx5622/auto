@@ -25,6 +25,6 @@ services:
       PMA_PASSWORD: Password123#@!
       UPLOAD_LIMIT: 3000000000
     ports:
-      - "8001:8001"
+      - 8001
     depends_on:
       - db
