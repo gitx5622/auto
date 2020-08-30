@@ -6,8 +6,7 @@ WORKDIR /app
 
 ADD composer.lock composer.json /app/
 RUN composer install --prefer-dist --optimize-autoloader --no-dev && \
-#    composer clear-cache && \
-    composer update
+    composer clear-cache
 
 ADD yii /app/
 ADD ./web /app/web/
