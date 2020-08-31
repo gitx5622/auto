@@ -22,11 +22,11 @@ services:
     image: phpmyadmin:latest
     restart: always
     environment:
-      PMA_PORT: 3306
+      PMA_HOST: db
       PMA_USER: bazengadaddy
       PMA_PASSWORD: Password123#@!
       UPLOAD_LIMIT: 3000000000
     ports:
-      - 8000
+      - "8000:80"
     depends_on:
       - db
