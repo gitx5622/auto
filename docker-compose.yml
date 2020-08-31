@@ -13,18 +13,18 @@ services:
     image: mysql:latest
     container_name: dbauto
     environment:
-      MYSQL_ROOT_PASSWORD: "Password123#@!"
+      MYSQL_ROOT_PASSWORD: Password123#@!
       MYSQL_DATABASE: cicd
-      MYSQL_USER: "bazengadaddy"
-      MYSQL_PASSWORD: "Password123#@!"
+      MYSQL_USER: bazengadaddy
+      MYSQL_PASSWORD: Password123#@!
 
   phpmyadmin:
     image: phpmyadmin:latest
     restart: always
     environment:
       PMA_HOST: db
-      PMA_USER: "bazengadaddy"
-      PMA_PASSWORD: "Password123#@!"
+      PMA_USER: bazengadaddy
+      PMA_PASSWORD: Password123#@!
       UPLOAD_LIMIT: 3000000000
     ports:
       - "8000:80"
