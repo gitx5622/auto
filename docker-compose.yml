@@ -5,13 +5,13 @@ services:
     volumes:
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
       - ./:/app:delegated
-    container_name: at_web
+    container_name: @_web
     ports:
       - '8070:80'
 
   db:
     image: mysql:5.7
-    container_name: at_db
+    container_name: @_db
     environment:
       MYSQL_ROOT_PASSWORD: "Password123#@!"
       MYSQL_DATABASE: cicd
