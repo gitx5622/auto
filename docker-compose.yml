@@ -10,7 +10,7 @@ services:
       - '8070:80'
 
   db:
-    image: mysql:5.7
+    image: mysql:latest
     container_name: dbauto
     environment:
       MYSQL_ROOT_PASSWORD: Password123#@!
@@ -19,7 +19,7 @@ services:
       MYSQL_PASSWORD: Password123#@!
 
   phpmyadmin:
-    image: phpmyadmin:latest
+    image: phpmyadmin:4.9.5
     restart: always
     environment:
       PMA_HOST: db
