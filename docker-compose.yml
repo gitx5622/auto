@@ -10,7 +10,7 @@ services:
       - '8070:80'
 
   db:
-    image: mysql:latest
+    image: mysql:5.7
     container_name: at_db
     environment:
       MYSQL_ROOT_PASSWORD: Password123#@!
@@ -27,6 +27,6 @@ services:
       PMA_PASSWORD: Password123#@!
       UPLOAD_LIMIT: 3000000000
     ports:
-      - 8001
+      - "8001:3306"
     depends_on:
       - db
