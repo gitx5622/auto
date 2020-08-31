@@ -19,7 +19,7 @@ services:
       MYSQL_PASSWORD: Password123#@!
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin:latest
     restart: always
     environment:
       PMA_PORT: 3306
@@ -27,6 +27,6 @@ services:
       PMA_PASSWORD: Password123#@!
       UPLOAD_LIMIT: 3000000000
     ports:
-      - "8001:3306"
+      - 8000
     depends_on:
       - db
