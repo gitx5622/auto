@@ -10,7 +10,7 @@ services:
       - '8070:80'
 
   db:
-    image: mysql:7.2
+    image: mysql:latest
     container_name: db
     environment:
       MYSQL_ROOT_PASSWORD: "Password123#@!"
