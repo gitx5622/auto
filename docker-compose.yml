@@ -22,7 +22,7 @@ services:
     image: phpmyadmin:latest
     restart: always
     environment:
-      PMA_HOST: 172.17.0.1
+      PMA_HOST: db
       PMA_USER: "bazengadaddy"
       PMA_PASSWORD: "Password123#@!"
       UPLOAD_LIMIT: 3000000000
