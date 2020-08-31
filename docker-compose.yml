@@ -11,7 +11,7 @@ services:
 
   db:
     image: mysql:latest
-    container_name: db
+    container_name: dbauto
     environment:
       MYSQL_ROOT_PASSWORD: "Password123#@!"
       MYSQL_DATABASE: cicd
