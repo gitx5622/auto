@@ -10,7 +10,8 @@ services:
       - '8070:80'
 
   db:
-    image: mysql:latest
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
     container_name: dbauto
     environment:
       MYSQL_ROOT_PASSWORD: Password123#@!
@@ -19,7 +20,7 @@ services:
       MYSQL_PASSWORD: Password123#@!
 
   phpmyadmin:
-    image: phpmyadmin:4.9.5
+    image: phpmyadmin/phpmyadmin:latest
     restart: always
     environment:
       PMA_HOST: db
