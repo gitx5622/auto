@@ -13,8 +13,10 @@ services:
     image: mysql:latest
     container_name: at_db
     environment:
-      MYSQL_ROOT_PASSWORD: "Password123#@!"
+      MYSQL_ROOT_PASSWORD: Password123#@!
       MYSQL_DATABASE: cicd
+      MYSQL_USER: bazengadaddy
+      MYSQL_PASSWORD: Password123#@!
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
