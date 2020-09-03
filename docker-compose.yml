@@ -20,7 +20,7 @@ services:
       MYSQL_PASSWORD: Password123#@!
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
+    image: phpmyadmin/phpmyadmin
     restart: always
     environment:
       PMA_USER: bazengadaddy
