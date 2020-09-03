@@ -15,14 +15,14 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: Password123#@!
       MYSQL_DATABASE: cicd
-      MYSQL_USER: bazengadaddy
+      MYSQL_USER: root
       MYSQL_PASSWORD: Password123#@!
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     restart: always
     environment:
-      PMA_USER: bazengadaddy
+      PMA_USER: root
       PMA_PASSWORD: Password123#@!
       UPLOAD_LIMIT: 3000000000
     ports:
