@@ -5,6 +5,12 @@ RUN a2enmod rewrite
 WORKDIR /app
 
 ADD composer.lock composer.json /app/
+# Install composer
+RUN curl -sS https://getcomposer.org/installer | php -- \
+        --filename=composer.phar \
+        --install-dir=/usr/local/bin && \
+    composer clear-cache
+
 RUN composer install --prefer-dist --optimize-autoloader --no-dev && \
     composer clear-cache
 
