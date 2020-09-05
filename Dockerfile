@@ -11,8 +11,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
         --install-dir=/usr/local/bin && \
     composer clear-cache
 
-RUN composer install --prefer-dist --optimize-autoloader --no-dev && \
-    composer clear-cache
+RUN composer install --prefer-dist --optimize-autoloader --no-dev
+
 
 ADD yii /app/
 ADD ./web /app/web/

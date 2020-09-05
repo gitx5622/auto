@@ -23,34 +23,26 @@ pipeline {
                         }
                         success{
 
-                           echo "Build Success"
+                           sh "composer install --prefer-dist --optimize-autoloader --no-dev"
                         }
                         failure{
                             echo "Failed"
                         }
                     }
                 }
-                stage ('Composer install'){
-                    steps{
-                       sh "composer install --prefer-dist --optimize-autoloader --no-dev"
-                       sh "composer update"
-//                        sh "chmod -R 777 runtime web/assets"
-                    }
-                }
+                 stage('Deploy our image') {
+                                    steps{
+                                        script {
+                                        docker.withRegistry( '', registryCredential ) {
+                                        dockerImage.push()
+                                            }
+                                        }
+                                    }
+                                }
 
                 stage ('Running tha Application'){
                     steps{
                         sh "docker-compose up -d"
-                    }
-                }
-
-                stage('Deploy our image') {
-                    steps{
-                        script {
-                        docker.withRegistry( '', registryCredential ) {
-                        dockerImage.push()
-                            }
-                        }
                     }
                 }
 
