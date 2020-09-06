@@ -10,7 +10,8 @@ services:
       - '8070:80'
 
   db:
-    image: mysql:5.7
+    image: mysql
+    command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
     container_name: dbto
     environment:
       MYSQL_ROOT_PASSWORD: Password123#@!
