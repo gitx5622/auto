@@ -16,10 +16,10 @@ services:
     command: ["--default-authentication-plugin=mysql_native_password"]
     container_name: bto
     environment:
-      MYSQL_ROOT_PASSWORD: Password123#@!
+      MYSQL_ROOT_PASSWORD: Password123
       MYSQL_DATABASE: cicd
       MYSQL_USER: root
-      MYSQL_PASSWORD: Password123#@!
+      MYSQL_PASSWORD: Password123
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -28,7 +28,7 @@ services:
     environment:
       PMA_HOST: db
       PMA_USER: root
-      PMA_PASSWORD: Password123#@!
+      PMA_PASSWORD: Password123
       UPLOAD_LIMIT: 3000000000
     ports:
       - "8000:80"
