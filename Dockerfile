@@ -21,5 +21,3 @@ ADD ./config /app/config
 RUN mkdir -p runtime web/assets && \
     chmod -R 777 runtime web/assets && \
     chown -R www-data:www-data runtime web/assets
-# Setup the custom configuration
-ADD mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
