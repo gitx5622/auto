@@ -8,11 +8,13 @@ services:
     container_name: wto
     ports:
       - '8070:80'
+    depends_on:
+      - db
 
   db:
     image: mysql
     command: ["--default-authentication-plugin=mysql_native_password"]
-    container_name: dbto
+    container_name: bto
     environment:
       MYSQL_ROOT_PASSWORD: Password123#@!
       MYSQL_DATABASE: cicd
@@ -21,7 +23,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: pto
+    container_name: phto
     restart: always
     environment:
       PMA_HOST: db
