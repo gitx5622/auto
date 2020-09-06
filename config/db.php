@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql://root:Password123@db:3306/cicd',
+    'dsn' => 'mysql://root:1165@db:3306/cicd',
 //    'username' => 'root',
 //    'password' => 'Password123#@!',
     'charset' => 'utf8',
